@@ -8,7 +8,7 @@ https://parse.com/docs/cloud_code_guide#functions-ondelete
 https://parse.com/docs/cloud_code_guide#functions-afterdelete
 "
   (:require [{{ns-name}}.domain :refer [Widget]])
-  (:require-macros [parseapp-cljs.parse-macros :refer [defjob]]))
+  (:require-macros [parseapp-cljs.parse-macros :refer [defhook]]))
 
 (defhook Widget beforeSave [request response]
   (let [widget (.-object request)]

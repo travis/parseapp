@@ -1,0 +1,3 @@
+#!/bin/bash
+
+lein do clean, cljsbuild once && cd app && parse deploy $1

@@ -3,7 +3,8 @@
 
 Define your objects here.
 "
-  (:require [parseapp-cljs.parse :as parse])
+  (:require [parseapp-cljs.parse :as parse]
+            parseapp-cljs.async)
   (:require-macros [parseapp-cljs.parse-macros :refer [defparsetype]]
                    [parseapp-cljs.async-macros :refer [<?]]
                    [cljs.core.async.macros :refer [go]]))

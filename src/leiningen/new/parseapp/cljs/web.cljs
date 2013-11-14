@@ -3,7 +3,9 @@
 
 https://parse.com/docs/cloud_code_guide#webapp
 "
-  (:require [{{ns-name}}.domain :refer [Widget all-widgets]])
+  (:require [{{ns-name}}.domain :refer [Widget all-widgets]]
+            [parseapp-cljs.web :refer [static render]]
+            parseapp-cljs.async)
   (:require-macros [parseapp-cljs.async-macros :refer [<?]]
                    [cljs.core.async.macros :refer [go]]))
 
@@ -18,14 +20,12 @@ https://parse.com/docs/cloud_code_guide#webapp
 
 (configure app express)
 
-(defn static [tag]
-  (.get app (str "/" tag)
-        (fn [req res] (.render res tag))))
-
-(static "terms")
+(static app "terms")
 
 (.get app "/widgets"
       (fn [request response]
         (go
-         (let [widgets (<? (all-widgets))]
+         (let [widgets (map #(.get % "name") (<? (all-widgets)))]
            (render response "widgets" {:widgets widgets})))))
+
+(.listen app)

@@ -3,7 +3,8 @@
 
 https://parse.com/docs/cloud_code_guide#functions
 "
-  (:require [{{ns-name}}.domain :refer [all-widgets]])
+  (:require [{{ns-name}}.domain :refer [all-widgets]]
+            parseapp-cljs.async)
   (:require-macros [parseapp-cljs.async-macros :refer [<?]]
                    [parseapp-cljs.parse-macros :refer [defdrpc]]
                    [cljs.core.async.macros :refer [go]]))

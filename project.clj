@@ -1,4 +1,4 @@
-(defproject parseapp/lein-template "0.1.0-SNAPSHOT"
+(defproject parseapp/lein-template "0.2.7"
   :description "A leiningnen template for creating Parse apps"
   :url "http://github.com/travis/parseapp"
   :license {:name "Eclipse Public License"

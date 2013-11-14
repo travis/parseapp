@@ -8,7 +8,7 @@
   }
   :dependencies [[org.clojure/clojurescript "0.0-2030"]
                  [org.clojure/core.async "0.1.242.0-44b1e3-alpha"]
-                 [parseapp-cljs "0.3.0-SNAPSHOT"]]
+                 [parseapp-cljs "0.3.0"]]
 
   :source-paths ["src/clj"]
   :plugins [[lein-cljsbuild "0.3.2"]]
@@ -17,6 +17,6 @@
     :builds {
       :main {
         :source-paths ["src/cljs"]
-             :compiler {:output-to "app/cljs.js"
+             :compiler {:output-to "app/cloud/cljs.js"
                         :optimizations :whitespace
                         :pretty-print true}}}})
