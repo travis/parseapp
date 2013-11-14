@@ -1,0 +1,18 @@
+{
+    "applications": {
+        "production": {
+            "applicationId": "",
+            "masterKey": ""
+        },
+        "_default": {
+            "link": "staging"
+        },
+        "staging": {
+            "applicationId": "",
+            "masterKey": ""
+        }
+    },
+    "global": {
+        "parseVersion": "1.2.7"
+    }
+}
