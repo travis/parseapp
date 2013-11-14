@@ -17,14 +17,17 @@ https://parse.com/docs/cloud_code_guide#started-installing
 
 ### Configure an app
 
-- create a new app https://parse.com/apps
-- add keys to config/local.json
+- create a new app at https://parse.com/apps
+- open up `app/config/global.json` and add your keys to the `staging` environment
 
 ## Usage
 
 ### Local development
 
-TODO
+This project includes a `local.json` configuration file in
+`app/config` that is ignored by `git` - use it to configure
+developer-specific environments.
+
 
 ## License
 

@@ -5,7 +5,10 @@ A Leiningen template for creating new ClojureScript
 
 ## Usage
 
+```
 lein new parseapp a-great-name-for-your-new-app
+open a-great-name-for-your-new-app/README.md
+```
 
 ## License
 
